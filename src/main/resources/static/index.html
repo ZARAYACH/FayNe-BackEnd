@@ -70,7 +70,7 @@
     }
 
     function connect() {
-        var socket = new SockJS('/chat');
+        var socket = new SockJS('/ws');
         stompClient = Stomp.over(socket);
         stompClient.connect({}, function (frame) {
             setConnected(true);
