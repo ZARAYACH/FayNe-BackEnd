@@ -1,7 +1,6 @@
 package com.FayNe.Chat.BackEnd.channel;
 
-import com.FayNe.Chat.BackEnd.message.Message;
-import com.FayNe.Chat.BackEnd.user.User;
+import com.FayNe.Chat.BackEnd.user.model.User;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;

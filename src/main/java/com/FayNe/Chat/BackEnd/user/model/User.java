@@ -1,4 +1,4 @@
-package com.FayNe.Chat.BackEnd.user;
+package com.FayNe.Chat.BackEnd.user.model;
 
 import com.FayNe.Chat.BackEnd.channel.Channel;
 import jakarta.persistence.*;

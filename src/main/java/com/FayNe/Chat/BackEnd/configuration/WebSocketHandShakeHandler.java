@@ -5,15 +5,16 @@ import org.springframework.http.server.ServerHttpResponse;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.WebSocketHandler;
 import org.springframework.web.socket.server.HandshakeFailureException;
-import org.springframework.web.socket.server.HandshakeHandler;
+import org.springframework.web.socket.server.support.DefaultHandshakeHandler;
 
+import java.security.Principal;
 import java.util.Map;
 
 @Component
-public class WebSocketHandShakeHandler implements HandshakeHandler {
+public class WebSocketHandShakeHandler extends DefaultHandshakeHandler {
 
 	@Override
-	public boolean doHandshake(ServerHttpRequest request, ServerHttpResponse response, WebSocketHandler wsHandler, Map<String, Object> attributes) throws HandshakeFailureException {
-		return true;
+	protected Principal determineUser(ServerHttpRequest request, WebSocketHandler wsHandler, Map<String, Object> attributes) {
+		return super.determineUser(request, wsHandler, attributes);
 	}
 }
